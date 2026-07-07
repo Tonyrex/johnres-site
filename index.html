@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Johnres — Technical Support Engineer · Prompt Engineer · Dashboard Developer</title>
+<meta name="description" content="Antony Johnres — Technical Support Engineer transitioning into AI/prompt engineering and dashboard development. Chennai, India." />
+<meta name="author" content="Antony Johnres" />
+<meta name="theme-color" content="#08121e" />
+<meta name="color-scheme" content="dark" />
+
+<!-- Canonical -->
+<link rel="canonical" href="https://j-antony-johnres.vercel.app/" />
+
+<!-- Favicons -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><radialGradient id='g' cx='55%25' cy='40%25' r='60%25'><stop offset='0%25' stop-color='%2322d3ee' stop-opacity='.55'/><stop offset='100%25' stop-color='%230a1420' stop-opacity='0'/></radialGradient></defs><rect width='64' height='64' rx='14' fill='%230a1420'/><rect x='4' y='4' width='56' height='56' rx='11' fill='url(%23g)'/><text x='50%25' y='58%25' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='46' fill='%236ee7ff' dominant-baseline='middle'>J</text><circle cx='32' cy='54' r='2' fill='%236ee7ff'/></svg>" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="mask-icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><text x='50%25' y='58%25' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='46' dominant-baseline='middle'>J</text></svg>" color="#6ee7ff" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Johnres — Portfolio" />
+<meta property="og:title" content="Antony Johnres — Support engineer, building with AI" />
+<meta property="og:description" content="5+ years bridging technical support, prompt engineering and data-driven dashboards. Chennai, India." />
+<meta property="og:url" content="https://j-antony-johnres.vercel.app/" />
+<meta property="og:image" content="https://j-antony-johnres.vercel.app/og-image.png" />
+<meta property="og:image:secure_url" content="https://j-antony-johnres.vercel.app/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Johnres — Support engineer, building with AI" />
+<meta property="og:locale" content="en_IN" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Antony Johnres — Support engineer, building with AI" />
+<meta name="twitter:description" content="5+ years bridging technical support, prompt engineering and data-driven dashboards. Chennai, India." />
+<meta name="twitter:image" content="https://j-antony-johnres.vercel.app/og-image.png" />
+<meta name="twitter:image:alt" content="Johnres — Support engineer, building with AI" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Antony Johnres",
+  "url": "https://j-antony-johnres.vercel.app/",
+  "jobTitle": "Technical Support Engineer",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Zebronics India Pvt. Ltd."
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Chennai",
+    "addressRegion": "Tamil Nadu",
+    "addressCountry": "IN"
+  },
+  "knowsLanguage": ["en", "hi", "ta", "ml"],
+  "sameAs": [
+    "https://github.com/Tonyrex",
+    "https://www.linkedin.com/in/j-antony-johnres/",
+    "https://www.youtube.com/@RexsFactflix"
+  ],
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Claude Code 101",
+      "credentialCategory": "certificate",
+      "recognizedBy": { "@type": "Organization", "name": "Anthropic" },
+      "dateCreated": "2026-05"
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "AI Fundamentals",
+      "credentialCategory": "certificate",
+      "recognizedBy": { "@type": "Organization", "name": "IBM" },
+      "dateCreated": "2026-05"
+    }
+  ]
+}
+</script>
+
+<style>
+/* ---------- Reset & tokens ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --bg:         #08121e;
+  --bg-2:       #0b1826;
+  --panel:      #0f1f30;
+  --panel-2:    #142a3f;
+  --ink:        #e6eef7;
+  --ink-dim:    #9db1c7;
+  --ink-mute:   #6a8199;
+  --line:       rgba(140,180,220,.12);
+  --line-strong:rgba(140,180,220,.22);
+  --cyan:       #6ee7ff;
+  --cyan-2:     #22d3ee;
+  --cyan-deep:  #0891b2;
+  --gold:       #d4b483;
+  --danger:     #ff7a7a;
+  --radius:     14px;
+  --mono:       "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --serif:      "Instrument Serif", "Times New Roman", serif;
+  --sans:       "Manrope", ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+html,body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(1200px 700px at 85% -10%, rgba(34,211,238,.08), transparent 60%),
+    radial-gradient(900px 600px at -10% 20%, rgba(212,180,131,.05), transparent 60%),
+    radial-gradient(700px 500px at 50% 110%, rgba(34,211,238,.06), transparent 60%);
+}
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.06;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+::selection{background:rgba(110,231,255,.28);color:#fff}
+a,button{cursor:pointer}
+img{max-width:100%;display:block}
+
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px;position:relative;z-index:1}
+@media (max-width:640px){.wrap{padding:0 20px}}
+
+section{padding:120px 0;position:relative;z-index:1}
+@media (max-width:768px){section{padding:80px 0}}
+
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--cyan);display:inline-flex;align-items:center;gap:10px;
+}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--cyan);display:inline-block;opacity:.7}
+
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;letter-spacing:-.01em;margin:0;color:var(--ink)}
+h1{font-size:clamp(48px,7.5vw,104px);line-height:1.02;letter-spacing:-.02em}
+h2{font-size:clamp(36px,5vw,64px);line-height:1.05}
+h3{font-size:clamp(22px,2.4vw,30px);line-height:1.2}
+p{margin:0}
+.muted{color:var(--ink-dim)}
+.mute{color:var(--ink-mute)}
+
+.nav{
+  position:fixed;top:16px;left:50%;transform:translateX(-50%);
+  z-index:50;width:calc(100% - 32px);max-width:1120px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 18px;border-radius:999px;
+  background:rgba(11,24,38,.55);backdrop-filter:blur(18px) saturate(140%);
+  -webkit-backdrop-filter:blur(18px) saturate(140%);
+  border:1px solid var(--line-strong);
+  transition:transform .4s cubic-bezier(.2,.8,.2,1), background .3s ease, box-shadow .3s ease;
+}
+.nav.hidden{transform:translateX(-50%) translateY(-140%)}
+.nav.scrolled{background:rgba(8,18,30,.78);box-shadow:0 12px 40px -20px rgba(0,0,0,.6)}
+.nav-brand{font-family:var(--serif);font-size:20px;letter-spacing:.02em;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:10px}
+.nav-brand .dot{width:8px;height:8px;border-radius:999px;background:var(--cyan);box-shadow:0 0 12px var(--cyan)}
+.nav-links{display:flex;gap:6px;align-items:center}
+.nav-links a{
+  color:var(--ink-dim);text-decoration:none;font-size:13px;font-family:var(--mono);
+  padding:8px 14px;border-radius:999px;transition:color .2s ease, background .2s ease;
+}
+.nav-links a:hover{color:var(--ink);background:rgba(110,231,255,.08)}
+.nav-cta{
+  color:var(--bg)!important;background:var(--cyan);font-weight:500;
+}
+.nav-cta:hover{background:#a8f0ff!important;color:var(--bg)!important}
+@media (max-width:720px){.nav-links a:not(.nav-cta){display:none}}
+
+.hero{padding-top:180px;padding-bottom:80px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:56px;align-items:end}
+@media (min-width:960px){.hero-grid{grid-template-columns:1.4fr .9fr;gap:80px}}
+
+.hero h1 .accent{color:var(--cyan);font-style:italic}
+.hero-meta{display:flex;flex-wrap:wrap;gap:24px 40px;margin-top:36px;color:var(--ink-dim);font-family:var(--mono);font-size:13px;letter-spacing:.04em}
+.hero-meta .k{color:var(--ink-mute);text-transform:uppercase;letter-spacing:.18em;font-size:11px;display:block;margin-bottom:6px}
+.hero-meta .v{color:var(--ink)}
+
+.hero-lede{max-width:520px;margin-top:28px;font-size:19px;line-height:1.6;color:var(--ink-dim)}
+
+.hero-side{
+  border-left:1px solid var(--line);
+  padding-left:28px;
+}
+@media (max-width:960px){.hero-side{border-left:none;padding-left:0;border-top:1px solid var(--line);padding-top:32px}}
+
+.status{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;color:var(--ink-dim);letter-spacing:.08em}
+.status .pulse{width:8px;height:8px;border-radius:999px;background:#4ade80;position:relative}
+.status .pulse::after{content:"";position:absolute;inset:-4px;border-radius:999px;border:1px solid #4ade80;opacity:.6;animation:pulse 2s ease-out infinite}
+@keyframes pulse{0%{transform:scale(.8);opacity:.8}100%{transform:scale(1.8);opacity:0}}
+
+.hero-card{margin-top:22px;padding:22px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(180deg, rgba(20,42,63,.6), rgba(15,31,48,.35))}
+.hero-card .row{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line)}
+.hero-card .row:last-child{border-bottom:0}
+.hero-card .row span:first-child{color:var(--ink-mute);font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.hero-card .row span:last-child{color:var(--ink);font-family:var(--mono);font-size:13px}
+
+.scroll-cue{margin-top:64px;display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--ink-mute);text-transform:uppercase}
+.scroll-cue .line{width:36px;height:1px;background:var(--ink-mute)}
+
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin-bottom:56px;flex-wrap:wrap}
+.sec-head h2{max-width:720px}
+.sec-head .idx{font-family:var(--mono);font-size:12px;color:var(--ink-mute);letter-spacing:.24em}
+
+.about-grid{display:grid;grid-template-columns:1fr;gap:32px}
+@media (min-width:900px){.about-grid{grid-template-columns:1.15fr .85fr;gap:80px}}
+.about p{font-size:19px;line-height:1.7;color:var(--ink-dim);max-width:640px}
+.about p + p{margin-top:20px}
+.about .lang{display:flex;flex-wrap:wrap;gap:8px;margin-top:32px}
+.about .lang span{font-family:var(--mono);font-size:12px;padding:6px 12px;border:1px solid var(--line-strong);border-radius:999px;color:var(--ink-dim);letter-spacing:.06em}
+
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.stat{border:1px solid var(--line);border-radius:var(--radius);padding:24px;background:rgba(15,31,48,.45);position:relative;overflow:hidden;transition:transform .3s ease, border-color .3s ease}
+.stat:hover{transform:translateY(-3px);border-color:var(--line-strong)}
+.stat .num{font-family:var(--serif);font-size:44px;color:var(--cyan);line-height:1}
+.stat .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-mute);margin-top:12px}
+
+.exp{display:grid;grid-template-columns:1fr;gap:24px}
+.exp-row{
+  display:grid;grid-template-columns:180px 1fr;gap:32px;
+  padding:32px 0;border-top:1px solid var(--line);
+}
+.exp-row:last-child{border-bottom:1px solid var(--line)}
+@media (max-width:760px){.exp-row{grid-template-columns:1fr;gap:12px}}
+.exp-date{font-family:var(--mono);font-size:12px;color:var(--ink-mute);letter-spacing:.14em;text-transform:uppercase;padding-top:6px}
+.exp h3{margin-bottom:6px}
+.exp .co{color:var(--cyan-2);font-family:var(--mono);font-size:13px;letter-spacing:.06em}
+.exp ul{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:12px}
+.exp ul li{color:var(--ink-dim);padding-left:22px;position:relative;font-size:15px}
+.exp ul li::before{content:"";position:absolute;left:0;top:12px;width:10px;height:1px;background:var(--cyan)}
+.exp-cat{
+  font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:#4ade80;margin:26px 0 12px;
+}
+.exp-cat:first-of-type{margin-top:22px}
+.exp-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.exp-tag{
+  font-family:var(--mono);font-size:11.5px;padding:6px 12px;border-radius:999px;
+  border:1px solid var(--line-strong);color:var(--ink-dim);
+}
+.exp-tag.hi{color:var(--cyan);border-color:rgba(110,231,255,.4);background:rgba(110,231,255,.06)}
+.exp-tag.hi2{color:#4ade80;border-color:rgba(74,222,128,.4);background:rgba(74,222,128,.06)}
+
+.skill-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.skill-card{
+  border:1px solid var(--line);border-radius:var(--radius);padding:28px;
+  background:linear-gradient(180deg, rgba(20,42,63,.35), rgba(15,31,48,.55));
+  transition:transform .35s cubic-bezier(.2,.8,.2,1), border-color .3s ease, background .3s ease;
+  position:relative;overflow:hidden;
+}
+.skill-card:hover{transform:translateY(-4px);border-color:rgba(110,231,255,.45)}
+.skill-card .h{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.skill-card h3{font-size:22px}
+.skill-card .no{font-family:var(--mono);font-size:11px;color:var(--ink-mute);letter-spacing:.2em}
+.chip-row{display:flex;flex-wrap:wrap;gap:8px}
+.chip{
+  font-family:var(--mono);font-size:12px;padding:7px 12px;border-radius:999px;
+  border:1px solid var(--line-strong);color:var(--ink-dim);
+  transition:color .2s ease, border-color .2s ease, background .2s ease;
+}
+.chip:hover{color:var(--cyan);border-color:var(--cyan);background:rgba(110,231,255,.06)}
+
+.proj-grid{display:grid;grid-template-columns:1fr;gap:20px}
+@media (min-width:820px){.proj-grid{grid-template-columns:1fr 1fr}}
+.proj{
+  position:relative;border:1px solid var(--line);border-radius:20px;padding:36px 32px;
+  background:linear-gradient(180deg, rgba(20,42,63,.55), rgba(11,24,38,.7));
+  overflow:hidden;transition:transform .4s cubic-bezier(.2,.8,.2,1), border-color .3s ease;
+  min-height:280px;display:flex;flex-direction:column;justify-content:space-between;gap:24px;
+}
+.proj:hover{transform:translateY(-4px);border-color:rgba(110,231,255,.4)}
+.proj::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg, transparent, var(--cyan), transparent);
+  opacity:0;transition:opacity .35s ease;
+}
+.proj:hover::before{opacity:.7}
+.proj .top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.proj .tag{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);padding:4px 10px;border:1px solid rgba(110,231,255,.35);border-radius:999px}
+.proj h3{margin-top:8px;max-width:22ch}
+.proj p{color:var(--ink-dim);font-size:15.5px;max-width:52ch;line-height:1.65}
+.proj .stack{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.proj .stack span{font-family:var(--mono);font-size:11px;color:var(--ink-mute);letter-spacing:.08em}
+.proj .stack span + span::before{content:"•";margin-right:6px;color:var(--line-strong)}
+
+.proj.feat{grid-column:1/-1;background:
+  radial-gradient(600px 300px at 90% 0%, rgba(34,211,238,.14), transparent 60%),
+  linear-gradient(180deg, rgba(20,42,63,.7), rgba(11,24,38,.75));
+}
+.proj.feat h3{font-size:clamp(28px,3.4vw,42px);max-width:20ch}
+
+.certs{
+  display:grid;grid-template-columns:1fr;gap:16px;margin-top:56px;
+  padding:28px;border:1px dashed var(--line-strong);border-radius:var(--radius);
+}
+@media (min-width:720px){.certs{grid-template-columns:auto 1fr 1fr}}
+.certs .head{font-family:var(--mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-mute);align-self:center}
+.cert{display:flex;flex-direction:column;gap:6px}
+.cert .t{color:var(--ink);font-family:var(--serif);font-size:22px}
+.cert .m{font-family:var(--mono);font-size:12px;color:var(--cyan-2);letter-spacing:.06em}
+
+.contact{padding-bottom:120px}
+.contact-card{
+  position:relative;border:1px solid var(--line-strong);border-radius:24px;
+  padding:64px 48px;overflow:hidden;
+  background:
+    radial-gradient(600px 300px at 100% 0%, rgba(34,211,238,.18), transparent 60%),
+    linear-gradient(180deg, rgba(15,31,48,.7), rgba(11,24,38,.85));
+}
+@media (max-width:640px){.contact-card{padding:44px 28px}}
+.contact-card h2{max-width:16ch}
+.contact-card .sub{color:var(--ink-dim);max-width:52ch;margin-top:20px;font-size:18px}
+.contact-links{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;
+  font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-decoration:none;
+  border:1px solid var(--line-strong);color:var(--ink);
+  transition:transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--cyan);color:var(--bg);border-color:var(--cyan)}
+.btn.primary:hover{background:#a8f0ff;border-color:#a8f0ff}
+.btn.ghost:hover{border-color:var(--cyan);color:var(--cyan)}
+.btn .arrow{transition:transform .25s ease}
+.btn:hover .arrow{transform:translateX(3px)}
+
+footer{padding:48px 0 64px;border-top:1px solid var(--line);color:var(--ink-mute)}
+.foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-family:var(--mono);font-size:12px;letter-spacing:.06em}
+.foot .made{color:var(--ink-dim)}
+.foot .made em{color:var(--gold);font-style:normal}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}
+.reveal.d2{transition-delay:.16s}
+.reveal.d3{transition-delay:.24s}
+.reveal.d4{transition-delay:.32s}
+
+.rail{display:flex;gap:40px;overflow:hidden;padding:18px 0;border-block:1px solid var(--line);margin-top:80px;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.rail-track{display:flex;gap:40px;animation:slide 40s linear infinite;flex-shrink:0}
+.rail span{font-family:var(--serif);font-size:22px;color:var(--ink-dim);white-space:nowrap;display:inline-flex;align-items:center;gap:40px}
+.rail span::after{content:"✦";color:var(--cyan);margin-left:40px}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{transition:none;opacity:1;transform:none}
+  .rail-track{animation:none}
+  .status .pulse::after{animation:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav" data-testid="site-nav" aria-label="Primary">
+  <a href="#top" class="nav-brand" data-testid="nav-brand"><span class="dot"></span> Johnres</a>
+  <div class="nav-links">
+    <a href="#about" data-testid="nav-link-about">About</a>
+    <a href="#work" data-testid="nav-link-work">Work</a>
+    <a href="#skills" data-testid="nav-link-skills">Skills</a>
+    <a href="#projects" data-testid="nav-link-projects">Projects</a>
+    <a href="#contact" class="nav-cta" data-testid="nav-cta">Get in touch →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header id="top" class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow reveal" data-testid="hero-eyebrow">Portfolio · v2026</span>
+        <h1 class="reveal d1" data-testid="hero-name" style="margin-top:24px">
+          Antony <span class="accent">Johnres</span>.<br/>
+          Support&nbsp;engineer, <span class="accent">building</span> with AI.
+        </h1>
+        <p class="hero-lede reveal d2" data-testid="hero-tagline">
+          5+ years bridging technical support, AI tooling, and data-driven dashboards —
+          currently sharpening prompt engineering craft and shipping single-file analytics tools.
+        </p>
+
+        <div class="hero-meta reveal d3">
+          <div><span class="k">Role</span><span class="v">Technical Support · Prompt Engineer · Dashboards</span></div>
+          <div><span class="k">Location</span><span class="v">Chennai, India</span></div>
+          <div><span class="k">Languages</span><span class="v">EN · HI · TA · ML</span></div>
+        </div>
+
+        <div class="scroll-cue reveal d4" aria-hidden="true">
+          <span class="line"></span> Scroll to explore
+        </div>
+      </div>
+
+      <aside class="hero-side reveal d2" data-testid="hero-side">
+        <div class="status" data-testid="availability-status"><span class="pulse"></span> Available for AI &amp; dashboard projects</div>
+        <div class="hero-card">
+          <div class="row"><span>Now</span><span>Zebronics India</span></div>
+          <div class="row"><span>Focus</span><span>Prompt Eng. + BI Dash</span></div>
+          <div class="row"><span>CSAT</span><span>95%+ · 1000+ tickets/yr</span></div>
+          <div class="row"><span>Ships</span><span>Single-file, no framework</span></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow reveal">01 · About</span>
+        <h2 class="reveal d1" style="margin-top:20px">Between the ticket queue<br/>and the model prompt.</h2>
+      </div>
+      <span class="idx reveal">/ Chennai · IN</span>
+    </div>
+
+    <div class="about-grid">
+      <div class="reveal d1">
+        <p>
+          I've spent 5+ years in the trenches of technical support — troubleshooting hardware &amp;
+          software issues, coordinating across product, logistics and reporting teams, and translating
+          customer chaos into cleanly documented signal.
+        </p>
+        <p>
+          Recently, I've moved that same instinct upstream — into <em style="color:var(--cyan);font-style:normal">prompt engineering</em>,
+          AI-assisted workflows, and building single-file analytics dashboards that turn CSVs and Excel
+          exports into decisions.
+        </p>
+        <div class="lang" data-testid="about-languages" aria-label="Spoken languages">
+          <span>English</span><span>हिन्दी</span><span>தமிழ்</span><span>മലയാളം</span>
+        </div>
+      </div>
+
+      <div class="stat-grid reveal d2">
+        <div class="stat" data-testid="stat-csat"><div class="num">95%+</div><div class="lbl">CSAT sustained</div></div>
+        <div class="stat" data-testid="stat-tickets"><div class="num">1K+</div><div class="lbl">Tickets / year</div></div>
+        <div class="stat" data-testid="stat-time"><div class="num">80%</div><div class="lbl">Report time reduced</div></div>
+        <div class="stat" data-testid="stat-years"><div class="num">5+</div><div class="lbl">Years in support</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow reveal">02 · Experience</span>
+        <h2 class="reveal d1" style="margin-top:20px">Work, in the field.</h2>
+      </div>
+      <span class="idx reveal">/ 2019 — present</span>
+    </div>
+
+    <div class="exp">
+      <article class="exp-row reveal" data-testid="exp-zebronics">
+        <div class="exp-date">Jan 2021 — Present · Chennai</div>
+        <div>
+          <h3>Technical Support Engineer</h3>
+          <div class="co">Zebronics India Pvt. Ltd.</div>
+
+          <div class="exp-cat">Customer Support &amp; Communication</div>
+          <ul>
+            <li>Handled <strong style="color:var(--ink)">50+ daily customer interactions</strong> via calls, email, and remote sessions — maintaining a <strong style="color:var(--ink)">95%+ CSAT score</strong> throughout.</li>
+            <li>Managed customer escalations with professionalism and empathy, coordinating with Tier 2/3 and keeping customers informed from first contact to resolution.</li>
+            <li>Communicated technical solutions clearly in English, Hindi, and Tamil — reducing frustration and improving first-contact resolution rates.</li>
+          </ul>
+
+          <div class="exp-cat">Technical Troubleshooting</div>
+          <ul>
+            <li>Diagnosed and resolved L1/L2 hardware and software issues across desktops, laptops, printers, and Thin Clients.</li>
+            <li>Performed root cause analysis on recurring incidents, documenting findings to prevent repeat contacts.</li>
+            <li>Configured and maintained Thin Client deployments end-to-end — provisioning, connectivity, and troubleshooting.</li>
+            <li>Applied basic networking knowledge (IP, DNS, DHCP, VPN) to resolve endpoint connectivity issues independently.</li>
+          </ul>
+
+          <div class="exp-cat">Team Development &amp; Reporting</div>
+          <ul>
+            <li>Designed and delivered structured onboarding training programs — cutting new-hire ramp time by <strong style="color:var(--ink)">20%</strong>.</li>
+            <li>Generated weekly and monthly KPI reports tracking ticket trends and team performance for management review.</li>
+            <li>Collaborated cross-functionally to improve support SOPs and implement best practices.</li>
+          </ul>
+
+          <div class="exp-tags">
+            <span class="exp-tag hi">Customer Support</span>
+            <span class="exp-tag hi">CSAT 95%+</span>
+            <span class="exp-tag hi">Escalation Mgmt</span>
+            <span class="exp-tag hi2">L1/L2</span>
+            <span class="exp-tag hi2">Thin Clients</span>
+            <span class="exp-tag">Active Directory</span>
+            <span class="exp-tag">Networking Basics</span>
+            <span class="exp-tag">Training</span>
+            <span class="exp-tag">SLA Compliance</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="exp-row reveal d1" data-testid="exp-altruist">
+        <div class="exp-date">Sep 2019 — Sep 2020 · Chennai</div>
+        <div>
+          <h3>Process Associate — Technical Support</h3>
+          <div class="co">Altruist Customer Management India</div>
+
+          <div class="exp-cat">Customer Support</div>
+          <ul>
+            <li>Managed high-volume inbound technical support calls in English and Hindi — resolving issues efficiently while keeping customer satisfaction central to every interaction.</li>
+            <li>Maintained full ownership of customer communication from first contact through to resolution, even during escalations.</li>
+            <li>Contributed directly to improved customer retention through empathetic complaint handling and a strong first-contact resolution focus.</li>
+          </ul>
+
+          <div class="exp-tags">
+            <span class="exp-tag hi">Customer Retention</span>
+            <span class="exp-tag hi">Inbound Support</span>
+            <span class="exp-tag hi">First-Contact Resolution</span>
+            <span class="exp-tag">Escalation Handling</span>
+            <span class="exp-tag">Multilingual EN/HI</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow reveal">03 · Toolkit</span>
+        <h2 class="reveal d1" style="margin-top:20px">What I reach for.</h2>
+      </div>
+      <span class="idx reveal">/ 04 clusters</span>
+    </div>
+
+    <div class="skill-grid">
+      <div class="skill-card reveal" data-testid="skill-support">
+        <div class="h"><h3>Support &amp; Ops</h3><span class="no">01</span></div>
+        <div class="chip-row">
+          <span class="chip">Technical Documentation</span>
+          <span class="chip">Project Management</span>
+          <span class="chip">Multilingual Support</span>
+          <span class="chip">EN · HI · TA · ML</span>
+          <span class="chip">CSAT Ownership</span>
+          <span class="chip">Cross-functional Coord.</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal d1" data-testid="skill-dev">
+        <div class="h"><h3>Dev &amp; Data</h3><span class="no">02</span></div>
+        <div class="chip-row">
+          <span class="chip">HTML / CSS / JS</span>
+          <span class="chip">Chart.js</span>
+          <span class="chip">PapaParse</span>
+          <span class="chip">SheetJS</span>
+          <span class="chip">Dashboard Dev</span>
+          <span class="chip">Single-file apps</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal d2" data-testid="skill-ai">
+        <div class="h"><h3>AI &amp; Prompting</h3><span class="no">03</span></div>
+        <div class="chip-row">
+          <span class="chip">Prompt Engineering</span>
+          <span class="chip">Claude workflows</span>
+          <span class="chip">AI Tool Orchestration</span>
+          <span class="chip">Content pipelines</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal d3" data-testid="skill-certs">
+        <div class="h"><h3>Recently certified</h3><span class="no">04</span></div>
+        <div class="chip-row">
+          <span class="chip">Claude Code 101 · Anthropic</span>
+          <span class="chip">AI Fundamentals · IBM</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="certs reveal" data-testid="certifications">
+      <div class="head">Certifications</div>
+      <div class="cert"><div class="t">Claude Code 101</div><div class="m">Anthropic · May 2026</div></div>
+      <div class="cert"><div class="t">AI Fundamentals</div><div class="m">IBM · May 2026</div></div>
+    </div>
+  </div>
+
+  <!-- decorative rail -->
+  <div class="rail" aria-hidden="true">
+    <div class="rail-track">
+      <span>Prompt Engineering</span><span>Dashboards</span><span>Chart.js</span><span>Claude</span><span>Support Ops</span><span>Chennai</span>
+      <span>Prompt Engineering</span><span>Dashboards</span><span>Chart.js</span><span>Claude</span><span>Support Ops</span><span>Chennai</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow reveal">04 · Selected Work</span>
+        <h2 class="reveal d1" style="margin-top:20px">Things I've shipped.</h2>
+      </div>
+      <span class="idx reveal">/ 05 projects</span>
+    </div>
+
+    <div class="proj-grid">
+      <article class="proj feat reveal" data-testid="project-crm">
+        <div class="top">
+          <span class="tag">Featured</span>
+          <span class="mute" style="font-family:var(--mono);font-size:12px">2026</span>
+        </div>
+        <div>
+          <h3>CRM / KPI Dashboard</h3>
+          <p>A single-file analytics dashboard with an interactive India heatmap, slicer-driven filters, and one-click JPG export — designed to make monthly reporting feel like a live product.</p>
+        </div>
+        <div class="stack">
+          <span>HTML/CSS/JS</span><span>Chart.js</span><span>SheetJS</span><span>Single-file</span>
+        </div>
+      </article>
+
+      <article class="proj reveal d1" data-testid="project-dawg">
+        <div class="top">
+          <span class="tag">Dashboard</span>
+          <span class="mute" style="font-family:var(--mono);font-size:12px">2026</span>
+        </div>
+        <div>
+          <h3>daWg Support Dashboard</h3>
+          <p>Dark/light-themed operational dashboard with CSV ingestion via PapaParse and a state-rank India map for regional support performance.</p>
+        </div>
+        <div class="stack"><span>Chart.js</span><span>PapaParse</span><span>India Map</span></div>
+      </article>
+
+      <article class="proj reveal d2" data-testid="project-tracker">
+        <div class="top">
+          <span class="tag">Ops Tool</span>
+          <span class="mute" style="font-family:var(--mono);font-size:12px">2025</span>
+        </div>
+        <div>
+          <h3>Zebronics Complaint Tracker</h3>
+          <p>Excel-based tracker with data validations, conditional formatting and clean pivots — the daily driver behind the 80% reporting-time reduction.</p>
+        </div>
+        <div class="stack"><span>Excel</span><span>Validation</span><span>Cond. Formatting</span></div>
+      </article>
+
+      <article class="proj reveal d1" data-testid="project-jenisart">
+        <div class="top">
+          <span class="tag">Portfolio Site</span>
+          <span class="mute" style="font-family:var(--mono);font-size:12px">2026</span>
+        </div>
+        <div>
+          <h3>Jeni's Art 2.0</h3>
+          <p>Navy-and-gold artist portfolio for a mandala &amp; zentangle creator — hero, About/creator stats, scrolling category ticker, and a sketchbook-style highlight grid.</p>
+        </div>
+        <div class="stack">
+          <span>HTML/CSS/JS</span><span>Editorial</span><span>Dark theme</span>
+        </div>
+        <a href="https://jeni-s-art-2-0.onrender.com/" target="_blank" rel="noopener"
+           style="align-self:flex-start;font-family:var(--mono);font-size:12px;color:var(--cyan);text-decoration:none;letter-spacing:.06em;display:inline-flex;align-items:center;gap:6px">
+          View live ↗
+        </a>
+      </article>
+
+      <article class="proj reveal d2" data-testid="project-factflix">
+        <div class="top">
+          <span class="tag">Content · AI</span>
+          <span class="mute" style="font-family:var(--mono);font-size:12px">2026</span>
+        </div>
+        <div>
+          <h3>Rex's Factflix</h3>
+          <p>YouTube automation and content system for a facts channel — from script generation to publishing pipeline, powered by prompt-engineered AI workflows.</p>
+        </div>
+        <div class="stack"><span>AI Workflows</span><span>YouTube</span><span>Prompt Eng.</span></div>
+        <a href="https://www.youtube.com/@RexsFactflix" target="_blank" rel="noopener"
+           style="align-self:flex-start;font-family:var(--mono);font-size:12px;color:var(--cyan);text-decoration:none;letter-spacing:.06em;display:inline-flex;align-items:center;gap:6px">
+          Watch channel ↗
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="contact-card reveal">
+      <span class="eyebrow">05 · Get in touch</span>
+      <h2 style="margin-top:20px">Have a dashboard, a prompt<br/>or a support workflow to sharpen?</h2>
+      <p class="sub">
+        I'm currently open to freelance and collaborative work around AI-assisted tooling,
+        single-file dashboards, and technical documentation. Say hi through any of these.
+      </p>
+      <div class="contact-links">
+        <a class="btn primary" href="https://j-antony-johnres.vercel.app" target="_blank" rel="noopener" data-testid="link-portfolio">
+          View portfolio <span class="arrow">↗</span>
+        </a>
+        <a class="btn ghost" href="https://github.com/Tonyrex" target="_blank" rel="noopener" data-testid="link-github">
+          GitHub · @Tonyrex <span class="arrow">↗</span>
+        </a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/j-antony-johnres/" target="_blank" rel="noopener" data-testid="link-linkedin">
+          LinkedIn <span class="arrow">↗</span>
+        </a>
+        <a class="btn ghost" href="https://www.youtube.com/@RexsFactflix" target="_blank" rel="noopener" data-testid="link-yt-factflix">
+          YouTube · Rex's Factflix <span class="arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot">
+    <span data-testid="footer-copy">© <span id="year"></span> Antony Johnres · All rights reserved</span>
+    <span class="made">Built with <em>curiosity</em> in Chennai · <span style="color:var(--cyan)">◍</span></span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+(function(){
+  var els = document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('in')}); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  },{threshold:0.14, rootMargin:"0px 0px -40px 0px"});
+  els.forEach(function(e){ io.observe(e); });
+})();
+
+(function(){
+  var nav = document.getElementById('nav');
+  var lastY = window.scrollY, ticking = false;
+  function onScroll(){
+    var y = window.scrollY;
+    if(y > 40) nav.classList.add('scrolled'); else nav.classList.remove('scrolled');
+    if(y > lastY && y > 220) nav.classList.add('hidden');
+    else nav.classList.remove('hidden');
+    lastY = y; ticking = false;
+  }
+  window.addEventListener('scroll', function(){
+    if(!ticking){ window.requestAnimationFrame(onScroll); ticking = true; }
+  }, {passive:true});
+})();
+
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click', function(e){
+    var id = a.getAttribute('href');
+    if(id.length < 2) return;
+    var el = document.querySelector(id);
+    if(!el) return;
+    e.preventDefault();
+    var y = el.getBoundingClientRect().top + window.scrollY - 80;
+    window.scrollTo({top:y, behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
+
